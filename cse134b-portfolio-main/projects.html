@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Long's Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+      header,
+      nav,
+      main,
+      section,
+      article,
+      footer {
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>javascript is disabled.</noscript>
+    <header>
+      <h1>Projects</h1>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="skillset.html">Skillset</a></li>
+          <li><a href="experiences.html">Experiences</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="experiments.html">Experiments</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="school" aria-labelledby="school-h2">
+        <h2 id="school-h2">School & Personal Projects</h2>
+
+        <project-card role="article" aria-labelledby="chat-title">
+          <h3 id="chat-title">Redis Chat Platform</h3>
+
+          <picture>
+            <source srcset="assets/chat-360.jpg" media="(max-width: 600px)" />
+            <img
+              src="assets/redis.jpg"
+              alt="Chat UI with online users and threads"
+              width="360"
+            />
+          </picture>
+
+          <p>
+            <strong>Result:</strong> Real-time messaging around 300ms; 99.9%
+            uptime with CI/CD &amp; monitoring. <br /><span
+              ><b>Stack:</b> Next.js (App Router) · TypeScript · Redis (pub/sub)
+              · Tailwind · Kinde Auth · Cloudinary</span
+            >
+          </p>
+
+          <ol>
+            <li>
+              Launched a real-time chat platform with TypeScript and App Router
+              to enable seamless communication, achieving 300ms response times
+            </li>
+            <li>Configured image uploads and basic moderation pipeline.</li>
+          </ol>
+
+          <p>
+            <a href="https://github.com/Longhodac/ChatHub-Redis-Chat-app"
+              >GitHub</a
+            >
+          </p>
+          <dialog open>
+            <p>
+              <em>Meta:</em> Includes CI, deployment scripts, and monitoring
+              notes.
+            </p>
+            <button type="button">Close</button>
+          </dialog>
+        </project-card>
+      </section>
+    </main>
+
+    <footer>
+      <p><small>&copy; 2025 Long</small></p>
+    </footer>
+    <script>
+      class HelloConsole extends HTMLElement {
+        connectedCallback() {
+          console.log("Hello world!");
+        }
+      }
+      customElements.define("hello-console", HelloConsole);
+    </script>
+    <hello-console></hello-console>
+    <script src="scripts.js"></script>
+  </body>
+</html>
